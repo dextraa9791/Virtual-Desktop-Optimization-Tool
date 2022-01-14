@@ -650,9 +650,9 @@ PROCESS {
     # 5/18/20: Removing Disk Cleanup and moving some of those tasks to the following manual cleanup
         If ($Optimizations -contains "DiskCleanup" -or $Optimizations -contains "All")
         {
-            Write-EventLog -EventId 90 -Message "Removing .tmp, .etl, .evtx, thumbcache*.db, *.log files not in use" -LogName 'Virtual Desktop Optimization' -Source 'DiskCleanup' -EntryType Information
-            Write-Host "Removing .tmp, .etl, .evtx, thumbcache*.db, *.log files not in use"
-            Get-ChildItem -Path c:\ -Include *.tmp, *.dmp, *.etl, *.evtx, thumbcache*.db, *.log -File -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -ErrorAction SilentlyContinue
+            #Write-EventLog -EventId 90 -Message "Removing .tmp, .etl, .evtx, thumbcache*.db, *.log files not in use" -LogName 'Virtual Desktop Optimization' -Source 'DiskCleanup' -EntryType Information
+            #Write-Host "Removing .tmp, .etl, .evtx, thumbcache*.db, *.log files not in use"
+            #Get-ChildItem -Path c:\ -Include *.tmp, *.dmp, *.etl, *.evtx, thumbcache*.db, *.log -File -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -ErrorAction SilentlyContinue
 
             # Delete "RetailDemo" content (if it exits)
             Write-EventLog -EventId 90 -Message "Removing Retail Demo content (if it exists)" -LogName 'Virtual Desktop Optimization' -Source 'DiskCleanup' -EntryType Information
