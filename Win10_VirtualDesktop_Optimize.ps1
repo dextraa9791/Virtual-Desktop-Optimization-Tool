@@ -24,6 +24,9 @@
     https://partner.microsoft.com/global/30000104 
 
 ######################################################################################################################################>
+# Logging
+Start-Transcript c:\temp\Optimization2.txt
+
 
 [Cmdletbinding(DefaultParameterSetName="Default")]
 Param (
@@ -84,10 +87,6 @@ The UWP app input file contains the list of almost all the UWP application packa
 The Store and a few others, such as Wallet, were left off intentionally.  Though it is possible to remove the Store app, 
 it is nearly impossible to get it back.  Please review the configuration files and change the 'VDIState' to anything but 'disabled' to keep the item.
 #>
-# Logging
-Start-Transcript c:\temp\Optimization2.txt
-
-
 BEGIN {
 
     Write-Warning "`n
