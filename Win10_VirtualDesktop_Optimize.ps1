@@ -24,9 +24,6 @@
     https://partner.microsoft.com/global/30000104 
 
 ######################################################################################################################################>
-# Logging
-Start-Transcript c:\temp\Optimization2.txt
-
 
 [Cmdletbinding(DefaultParameterSetName="Default")]
 Param (
@@ -88,7 +85,8 @@ The Store and a few others, such as Wallet, were left off intentionally.  Though
 it is nearly impossible to get it back.  Please review the configuration files and change the 'VDIState' to anything but 'disabled' to keep the item.
 #>
 BEGIN {
-
+    # Logging
+    Start-Transcript c:\temp\Optimization2.txt
     Write-Warning "`n
 *************************************************************************************************************************
 This PowerShell script has been replaced with file 'Windows_VDOT.ps1'. This change was made to add support for Windows 11
