@@ -94,6 +94,10 @@ All updates to the VDOT script will be made in the new file 'Windows_VDOT.ps1'.
 The file 'Win10_VirtualDesktop_Optimize.ps1' will remain available for backward compatibility.
 *************************************************************************************************************************`n"
     Start-Sleep -Seconds 5
+    
+    # Scan Microsoft Store App Updates
+    Get-CimInstance -Namespace "Root\cimv2\mdm\dmmap" -ClassName "MDM_EnterpriseModernAppManagement_AppManagement01" | 
+        Invoke-CimMethod -MethodName UpdateScanMethod
 
     If (-not([System.Diagnostics.EventLog]::SourceExists("Virtual Desktop Optimization")))
     {
