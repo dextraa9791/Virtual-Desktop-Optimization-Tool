@@ -86,7 +86,6 @@ it is nearly impossible to get it back.  Please review the configuration files a
 #>
 BEGIN {
     # Logging
-    Start-Transcript c:\temp\Optimization2.txt
     Write-Warning "`n
 *************************************************************************************************************************
 This PowerShell script has been replaced with file 'Windows_VDOT.ps1'. This change was made to add support for Windows 11
